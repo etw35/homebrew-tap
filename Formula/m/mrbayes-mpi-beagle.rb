@@ -37,6 +37,7 @@ class MrbayesMpiBeagle < Formula
     system "./configure", *args, *std_configure_args
     system "make", "install"
     mv bin/"mb", bin/"mb-mpi-beagle"
+    mv share/"doc/mrbayes", share/"doc/mrbayes-mpi-beagle" if (share/"doc/mrbayes").exist?
 
     doc.install share/"examples/mrbayes" => "examples"
   end
