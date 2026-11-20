@@ -1,4 +1,4 @@
-class MrbayesMPIBeagle < Formula
+class MrbayesMpiBeagle < Formula
   desc "Bayesian inference of phylogenies and evolutionary models"
   homepage "https://nbisweden.github.io/MrBayes/"
   url "https://github.com/NBISweden/MrBayes/archive/refs/tags/v3.2.9.tar.gz"
