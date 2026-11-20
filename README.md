@@ -1,4 +1,5 @@
 # Etw35 Tap
+This is a tap for the [Homebrew package manager](https://github.com/Homebrew/brew) package manager. Some packages, e.g., Mrbayes, are just updated or modified versions of those from [Homebrew Core](https://github.com/homebrew/homebrew-core). I've put those here because, although they work, I have not yet gone through Homebrew's submission process.
 
 ## How do I install these formulae?
 
