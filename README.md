@@ -18,8 +18,9 @@ brew "<formula>"
 ```
 
 ## Installing MrBayes
-To install Mrbayes 3.2.9 with OpenMPI and Beagle support, run:
-brew install etw35/tap/mrbayes-mpi-beagle
+To install Mrbayes 3.2.9 with OpenMPI and Beagle support
+
+`brew install etw35/tap/mrbayes-mpi-beagle`
 
 This version can coexist with mb and mb-mpi from Homebrew Core.
 
