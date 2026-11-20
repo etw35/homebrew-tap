@@ -36,12 +36,13 @@ class Mrbayes < Formula
     end
     system "./configure", *args, *std_configure_args
     system "make", "install"
+    mv bin/"mb", bin/"mb-mpi-beagle"
 
     doc.install share/"examples/mrbayes" => "examples"
   end
 
   test do
-    beagle_output = pipe_output(bin/"mb", "showbeagle\nquit\n")
+    beagle_output = pipe_output(bin/"mb-mpi-beagle", "showbeagle\nquit\n")
     assert_match "Available resources reported by beagle library:", beagle_output
     assert_match "Resource 0:", beagle_output
 
@@ -49,6 +50,6 @@ class Mrbayes < Formula
     cmd = "mcmc ngen = 5000; sump; sumt;"
     cmd = "set usebeagle=yes beagledevice=cpu;" + cmd
     inreplace "primates.nex", "end;", cmd + "\n\nend;"
-    system bin/"mb", "primates.nex"
+    system bin/"mb-mpi-beagle", "primates.nex"
   end
 end
